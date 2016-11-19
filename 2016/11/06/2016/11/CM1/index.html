@@ -23,8 +23,7 @@
 <meta property="og:description" content="“简单理解配置管理”">
 <meta property="og:image" content="http://dusk-life.b0.upaiyun.com/2016/CM1.jpg">
 <meta property="og:image" content="http://dusk-life.b0.upaiyun.com/2016/CM2.jpg">
-<meta property="og:image" content="http://img.youmeek.com/2016/hexo-start-a-1.jpg">
-<meta property="og:updated_time" content="2016-11-19T15:05:02.082Z">
+<meta property="og:updated_time" content="2016-11-19T17:08:12.886Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="如何用配置管理思想做文档管理（系列一：入门）">
 <meta name="twitter:description" content="“简单理解配置管理”">
@@ -331,17 +330,20 @@
 <li><p>然后知乎上有个回答是介绍配置管理的我觉得还不错，你可以点击去看：<a href="https://www.zhihu.com/question/20621014" target="_blank" rel="external">配置管理的起源、发展历程和主要作用是什么？</a></p>
 </li>
 </ul>
-<h2 id="关于配置项"><a href="#关于配置项" class="headerlink" title="关于配置项"></a>关于配置项</h2><ul>
-<li>说到配置项首先我们要回顾一下项目开发的标准流程，以最基本的’瀑布式模型’来讲，项目开发标准过程按软硬结合、纯软件会分成以下两种：<ul>
-<li>软硬结合：立项-需求分析-方案设计-软件/硬件/结构设计-样机-测试-试产-量产</li>
-<li>纯软件：立项-需求分析-概要设计-详细设计-编码-测试-发布</li>
+<h2 id="关于配置项"><a href="#关于配置项" class="headerlink" title="关于配置项"></a>关于配置项</h2><p>`</p>
+<ul>
+<li>首先我们来举个简单的例子，来解释有哪些可以算是配置项的（顺便灌输一下’项目管理’流程）。假设你是大厨，你要创造一个新菜式给你的客户吃，首先按照客户的需求，全素不要辣，根据这个需求首先你要计划用哪些材料，采用哪种方式烹饪，接着你开始拟制材料清单，制作步骤，采购材料回来后，你按照材料清单和步骤做好菜，端出去给客户。</li>
+<li>那这么一个过程里面，简单分了几个阶段：<ul>
+<li>需求获取和分析：经过跟客户沟通，知道客户要的是全素并且不辣，这个时候输出了需求分析说明</li>
+<li>方案设计：计划用的材料和烹饪方式，这个时候有了方案设计说明</li>
+<li>开发阶段：拟制材料清单，根据材料清单购买材料。选择烹饪工具，烹饪的地点。记录烹饪步骤。</li>
+<li>结束：把成品确认OK了，把食物转交客户品尝</li>
 </ul>
 </li>
-<li>然后你可以拿到你公司的开发流程管理规范或者网上搜一份例如这份：<a href="http://wenku.baidu.com/view/9fdbc70a581b6bd97f19ea30.html。在这份流程文件中，开发流程是分为了在这份流程文档里面4.6.5提到，新产品公司验收需要提供的文件资料有设计任务书，工艺规程、设计说明、全套设计条件，这些都可以算是配置项。" target="_blank" rel="external">http://wenku.baidu.com/view/9fdbc70a581b6bd97f19ea30.html。在这份流程文件中，开发流程是分为了在这份流程文档里面4.6.5提到，新产品公司验收需要提供的文件资料有设计任务书，工艺规程、设计说明、全套设计条件，这些都可以算是配置项。</a></li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">- 我们来举个简单的例子，来解释有哪些可以算是配置项的（顺便灌输一下&apos;项目管理&apos;流程）。假设你是大厨，你要创造一个新菜式给你的客户吃，首先按照客户的需求，全素不要辣，根据这个需求首先你要计划用哪些材料，采用哪种方式烹饪，接着你开始拟制材料清单，制作步骤，采购材料回来后，你按照材料清单和步骤做好菜，端出去给客户。</div><div class="line">- 那这么一个过程里面，简单分了几个阶段：</div><div class="line">	- 需求获取和分析：经过跟客户沟通，知道客户要的是全素并且不辣，这个时候输出了需求分析说明</div><div class="line">	- 方案设计：计划用的材料和烹饪方式，这个时候有了方案设计说明</div><div class="line">	- 开发阶段：拟制材料清单，根据材料清单购买材料。选择烹饪工具，烹饪的地点。记录烹饪步骤。</div><div class="line">	- 结束：把成品确认OK了，把食物转交客户品尝</div><div class="line">- 这里面，需求分析说明，方案设计说明，材料清单，材料，烹饪工具，烹饪地点，烹饪步骤说明，成品，都可以算是配置项。甚至还有做这个菜，你参考了哪些烹饪书，这个书也应该纳入配置项的范围</div></pre></td></tr></table></figure>
-<ul>
-<li>最后我们来看一下’CMMI-DEV V1.3’中是如何划定配置项范围的，意思差不多就是<strong>整个产品开发过程所有相关的事物，都可以称之为配置项</strong>：</li>
+<li><p>这里面，需求分析说明，方案设计说明，材料清单，材料，烹饪工具，烹饪地点，烹饪步骤说明，成品，都可以算是配置项。甚至还有做这个菜，你参考了哪些烹饪书，这个书也应该纳入配置项的范围<br>`</p>
+</li>
+<li><p>最后我们来看一下’CMMI-DEV V1.3’中是如何划定配置项范围的，意思差不多就是<strong>整个产品开发过程所有相关的事物，都可以称之为配置项</strong>：</p>
+</li>
 </ul>
 <blockquote>
 <p><img src="http://dusk-life.b0.upaiyun.com/2016/CM1.jpg" alt="CMMI配置项1"></p>
@@ -353,21 +355,10 @@
 <li><p>CMMI-DEV V1.3戳这里下载<a href="http://pan.baidu.com/s/1i5a4EpB" target="_blank" rel="external">o(￣▽￣)d</a></p>
 </li>
 </ul>
-<h2 id="关于基线（首先要了解项目管理流程，为了方便理解，以瀑布型模型来例子）"><a href="#关于基线（首先要了解项目管理流程，为了方便理解，以瀑布型模型来例子）" class="headerlink" title="关于基线（首先要了解项目管理流程，为了方便理解，以瀑布型模型来例子）"></a>关于基线（首先要了解项目管理流程，为了方便理解，以瀑布型模型来例子）</h2><h2 id="关于标识"><a href="#关于标识" class="headerlink" title="关于标识"></a>关于标识</h2><h3 id="什么是标识"><a href="#什么是标识" class="headerlink" title="什么是标识"></a>什么是标识</h3><h3 id="为什么要标识"><a href="#为什么要标识" class="headerlink" title="为什么要标识"></a>为什么要标识</h3><h2 id="关于版本控制"><a href="#关于版本控制" class="headerlink" title="关于版本控制"></a>关于版本控制</h2><h2 id="关于变更管理"><a href="#关于变更管理" class="headerlink" title="关于变更管理"></a>关于变更管理</h2><h3 id="为什么要管理变更‘"><a href="#为什么要管理变更‘" class="headerlink" title="为什么要管理变更‘"></a>为什么要管理变更‘</h3><ul>
+<h2 id="关于基线（首先要了解项目管理流程，为了方便理解，以瀑布型模型来例子）"><a href="#关于基线（首先要了解项目管理流程，为了方便理解，以瀑布型模型来例子）" class="headerlink" title="关于基线（首先要了解项目管理流程，为了方便理解，以瀑布型模型来例子）"></a>关于基线（首先要了解项目管理流程，为了方便理解，以瀑布型模型来例子）</h2><h2 id="关于标识"><a href="#关于标识" class="headerlink" title="关于标识"></a>关于标识</h2><h3 id="什么是标识"><a href="#什么是标识" class="headerlink" title="什么是标识"></a>什么是标识</h3><h3 id="为什么要标识"><a href="#为什么要标识" class="headerlink" title="为什么要标识"></a>为什么要标识</h3><h2 id="关于版本控制"><a href="#关于版本控制" class="headerlink" title="关于版本控制"></a>关于版本控制</h2><h2 id="关于变更管理"><a href="#关于变更管理" class="headerlink" title="关于变更管理"></a>关于变更管理</h2><h3 id="为什么要管理变更"><a href="#为什么要管理变更" class="headerlink" title="为什么要管理变更"></a>为什么要管理变更</h3><ul>
 <li>（其中配置管理的定义和目的提到的一点就是保持产品的一致性，假设） <h3 id="如何管理变更"><a href="#如何管理变更" class="headerlink" title="如何管理变更"></a>如何管理变更</h3></li>
 </ul>
-<h2 id="关于配置审计"><a href="#关于配置审计" class="headerlink" title="关于配置审计"></a>关于配置审计</h2><h2 id="关于配置状态报告"><a href="#关于配置状态报告" class="headerlink" title="关于配置状态报告"></a>关于配置状态报告</h2><p>## </p>
-<p>执行配置管理的首要前提，是需要流程规范：配置管理应该有相关的规范流程文件作为支撑，这是最重要并且要走在前面的</p>
-<ul>
-<li>这个是网址链接：<a href="https://zespia.tw/blog/2012/10/11/hexo-debut/" target="_blank" rel="external">https://zespia.tw/blog/2012/10/11/hexo-debut/</a></li>
-<li>这是文字加粗：git：<strong>2.7.0.2-64-bit</strong></li>
-<li>这里是加标注的链接：<a href="http://www.jianshu.com/p/05289a4bc8b2" target="_blank" rel="external">如何搭建一个独立博客——简明Github Pages与Hexo教程</a></li>
-<li>这里是添加图片：<img src="http://img.youmeek.com/2016/hexo-start-a-1.jpg" alt="验证 git 安装"></li>
-<li>这样可以给某些文字加颜色哦：<code>逗逼就是这样学习的</code></li>
-<li>也可以这样给文字加颜色哦：<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">blablablabla</div><div class="line">blablabla</div><div class="line">blabla</div><div class="line">bla</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<h2 id="结束语"><a href="#结束语" class="headerlink" title="结束语"></a>结束语</h2><ul>
+<h2 id="关于配置审计"><a href="#关于配置审计" class="headerlink" title="关于配置审计"></a>关于配置审计</h2><h2 id="关于配置状态报告"><a href="#关于配置状态报告" class="headerlink" title="关于配置状态报告"></a>关于配置状态报告</h2><h2 id="结束语"><a href="#结束语" class="headerlink" title="结束语"></a>结束语</h2><ul>
 <li>最后，我挺欣赏文员在面试类似岗位的时候，把自己定位为配置管理员。不为别的，就为了敢写配置管理员这一点，毕竟不是每个人都会主动去了解，配置管理是做什么事情的。自己原本做的事情，哪些跟配置管理是有关系的</li>
 <li>当然我会建议你写的时候，把<strong>技术文员</strong>这几个也带上，毕竟每个公司对这个岗位的定义不同，大部分来讲，这个岗位叫<strong>技术文员</strong></li>
 <li>带技术含量的，你当然可以写<strong>配置管理员</strong>或<strong>配置管理工程师</strong></li>
@@ -385,7 +376,7 @@
         <p><span>本文标题:</span><a href="/2016/11/06/2016/11/CM1/">如何用配置管理思想做文档管理（系列一：入门）</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">jungly</a></p>
         <p><span>发布时间:</span>2016-11-06, 19:03:52</p>
-        <p><span>最后更新:</span>2016-11-19, 23:05:02</p>
+        <p><span>最后更新:</span>2016-11-20, 01:08:12</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2016/11/06/2016/11/CM1/" title="如何用配置管理思想做文档管理（系列一：入门）">http://dusklife.com/2016/11/06/2016/11/CM1/</a>
             <span class="copy-path" data-clipboard-text="原文: http://dusklife.com/2016/11/06/2016/11/CM1/　　作者: jungly" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
@@ -404,7 +395,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#写在前面"><span class="toc-number">1.</span> <span class="toc-text">写在前面</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#系列说明"><span class="toc-number">2.</span> <span class="toc-text">系列说明</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#关于配置管理"><span class="toc-number">3.</span> <span class="toc-text">关于配置管理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#关于配置项"><span class="toc-number">4.</span> <span class="toc-text">关于配置项</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#关于基线（首先要了解项目管理流程，为了方便理解，以瀑布型模型来例子）"><span class="toc-number">5.</span> <span class="toc-text">关于基线（首先要了解项目管理流程，为了方便理解，以瀑布型模型来例子）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#关于标识"><span class="toc-number">6.</span> <span class="toc-text">关于标识</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#什么是标识"><span class="toc-number">6.1.</span> <span class="toc-text">什么是标识</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#为什么要标识"><span class="toc-number">6.2.</span> <span class="toc-text">为什么要标识</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#关于版本控制"><span class="toc-number">7.</span> <span class="toc-text">关于版本控制</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#关于变更管理"><span class="toc-number">8.</span> <span class="toc-text">关于变更管理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#为什么要管理变更‘"><span class="toc-number">8.1.</span> <span class="toc-text">为什么要管理变更‘</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#如何管理变更"><span class="toc-number">8.2.</span> <span class="toc-text">如何管理变更</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#关于配置审计"><span class="toc-number">9.</span> <span class="toc-text">关于配置审计</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#关于配置状态报告"><span class="toc-number">10.</span> <span class="toc-text">关于配置状态报告</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#结束语"><span class="toc-number">11.</span> <span class="toc-text">结束语</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#下期预告"><span class="toc-number">12.</span> <span class="toc-text">下期预告</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#写在前面"><span class="toc-number">1.</span> <span class="toc-text">写在前面</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#系列说明"><span class="toc-number">2.</span> <span class="toc-text">系列说明</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#关于配置管理"><span class="toc-number">3.</span> <span class="toc-text">关于配置管理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#关于配置项"><span class="toc-number">4.</span> <span class="toc-text">关于配置项</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#关于基线（首先要了解项目管理流程，为了方便理解，以瀑布型模型来例子）"><span class="toc-number">5.</span> <span class="toc-text">关于基线（首先要了解项目管理流程，为了方便理解，以瀑布型模型来例子）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#关于标识"><span class="toc-number">6.</span> <span class="toc-text">关于标识</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#什么是标识"><span class="toc-number">6.1.</span> <span class="toc-text">什么是标识</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#为什么要标识"><span class="toc-number">6.2.</span> <span class="toc-text">为什么要标识</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#关于版本控制"><span class="toc-number">7.</span> <span class="toc-text">关于版本控制</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#关于变更管理"><span class="toc-number">8.</span> <span class="toc-text">关于变更管理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#为什么要管理变更"><span class="toc-number">8.1.</span> <span class="toc-text">为什么要管理变更</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#如何管理变更"><span class="toc-number">8.2.</span> <span class="toc-text">如何管理变更</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#关于配置审计"><span class="toc-number">9.</span> <span class="toc-text">关于配置审计</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#关于配置状态报告"><span class="toc-number">10.</span> <span class="toc-text">关于配置状态报告</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#结束语"><span class="toc-number">11.</span> <span class="toc-text">结束语</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#下期预告"><span class="toc-number">12.</span> <span class="toc-text">下期预告</span></a></li></ol>
         
     </div>
     <style>
