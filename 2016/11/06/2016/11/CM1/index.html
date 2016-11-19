@@ -23,7 +23,7 @@
 <meta property="og:description" content="“简单理解配置管理”">
 <meta property="og:image" content="http://dusk-life.b0.upaiyun.com/2016/CM1.jpg">
 <meta property="og:image" content="http://dusk-life.b0.upaiyun.com/2016/CM2.jpg">
-<meta property="og:updated_time" content="2016-11-19T17:08:12.886Z">
+<meta property="og:updated_time" content="2016-11-19T17:13:17.871Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="如何用配置管理思想做文档管理（系列一：入门）">
 <meta name="twitter:description" content="“简单理解配置管理”">
@@ -305,11 +305,11 @@
 </li>
 <li>我自己是理工科出身，职业是做电子类行业的项目管理，看了一些CMMI,考了个系统集成管理师，对配置管理算不上很专业，但多多少少有一点了解。有时候我看着身边那几个很机械地管理文档，或者有的文员意欲提升一下工作技能却无从下手的时候，其实是觉得很痛心。她们不了解，所以她们不知道自己的工作其实可以变得很有价值，用配置管理的思想去管控这些技术资料，至少会让这个繁琐而枯燥的工作变得很有成就感</li>
 <li>实际上配置管理并不是门槛那么高的职业，当你在对一系列文件进行管理的时候，其实已经在做配置管理。所以我希望通过这系列的文章，跟你简单地讲讲，配置管理是做什么的，可以怎么做</li>
-<li>为了让没有技术基础的同志们也能理解，我主要从管理文档的方向去讲述</li>
+<li><p>为了让没有技术基础的同志们也能理解，我主要从管理文档的方向去讲述</p>
+</li>
+<li><p>我工作经验也不久，所以肯定有写得不好的地方，你可以指出来，我们可以讨论交流一下。套用youmeek的一句话就是，博客是个适合打脸的地方。如果你发现我理解有错的地方，并且愿意给我指点迷津的，欢迎联系我email：<strong>452053608@qq.com</strong></p>
+</li>
 </ul>
-<blockquote>
-<p>我工作经验也不久，所以肯定有写得不好的地方，你可以指出来，我们可以讨论交流一下。套用youmeek的一句话就是，博客是个适合打脸的地方。如果你发现我理解有错的地方，并且愿意给我指点迷津的，欢迎联系我email：<strong>452053608@qq.com</strong></p>
-</blockquote>
 <h2 id="系列说明"><a href="#系列说明" class="headerlink" title="系列说明"></a>系列说明</h2><ul>
 <li>本系列会分为3大篇，3大篇对应的内容分别如下<ul>
 <li>1.如何简单地理解配置管理</li>
@@ -319,19 +319,15 @@
 </li>
 </ul>
 <h2 id="关于配置管理"><a href="#关于配置管理" class="headerlink" title="关于配置管理"></a>关于配置管理</h2><blockquote>
-<p>首先还是先灌输一下配置管理的基本概念：</p>
-<pre><code>- 百度百科定义：[配置管理](http://baike.baidu.com/link?url=LiT1QsAwa3d929efYNCvB7a5-knpHls4HPcOrCz_e6b6g988EMvRgOWHPIRT4iQKaiDA8GFdZ0hfh5Ed_I_PWgcNrTw9cF7_Gc6c_286yRUUaU1BTctqG-mnPB6R668L)是通过技术或行政手段对软件产品及其开发过程和生命周期进行控制、规范的一系列措施。配置管理的目标是记录软件产品的演化过程，确保软件开发者在软件生命周期中各个阶段都能得到精确的产品配置。
-- 维基百科定义：[配置管理](https://zh.wikipedia.org/wiki/%E7%B5%84%E6%85%8B%E7%AE%A1%E7%90%86)是一个创建系统工程的过程，用来创建与维持一个产品，让这个产品的性能、功能，以及它所要求的物理特性，在它的生命周期中，都能保持稳定与一致性。
-- IEEE610.12-90中定义：应用技术的和管理的指导和监督来：标识和用文档记录配置项的功能和物理特征、控制对这些特征的变更、记录和报告变更处理过程和实现状态、 验证与规定的需求的一致性。
-</code></pre></blockquote>
+<p>首先还是先灌输一下配置管理的基本概念：<br>百度百科定义：<a href="http://baike.baidu.com/link?url=LiT1QsAwa3d929efYNCvB7a5-knpHls4HPcOrCz_e6b6g988EMvRgOWHPIRT4iQKaiDA8GFdZ0hfh5Ed_I_PWgcNrTw9cF7_Gc6c_286yRUUaU1BTctqG-mnPB6R668L" target="_blank" rel="external">配置管理</a>是通过技术或行政手段对软件产品及其开发过程和生命周期进行控制、规范的一系列措施。配置管理的目标是记录软件产品的演化过程，确保软件开发者在软件生命周期中各个阶段都能得到精确的产品配置。<br>维基百科定义：<a href="https://zh.wikipedia.org/wiki/%E7%B5%84%E6%85%8B%E7%AE%A1%E7%90%86" target="_blank" rel="external">配置管理</a>是一个创建系统工程的过程，用来创建与维持一个产品，让这个产品的性能、功能，以及它所要求的物理特性，在它的生命周期中，都能保持稳定与一致性。<br>IEEE610.12-90中定义：应用技术的和管理的指导和监督来：标识和用文档记录配置项的功能和物理特征、控制对这些特征的变更、记录和报告变更处理过程和实现状态、 验证与规定的需求的一致性。</p>
+</blockquote>
 <ul>
 <li><p>从以上几条看来，其实可以抓到一个中心词，就是<strong>一致性</strong>，关于如何维护一致性后面我会详细的说，这里看看就行。</p>
 </li>
 <li><p>然后知乎上有个回答是介绍配置管理的我觉得还不错，你可以点击去看：<a href="https://www.zhihu.com/question/20621014" target="_blank" rel="external">配置管理的起源、发展历程和主要作用是什么？</a></p>
 </li>
 </ul>
-<h2 id="关于配置项"><a href="#关于配置项" class="headerlink" title="关于配置项"></a>关于配置项</h2><p>`</p>
-<ul>
+<h2 id="关于配置项"><a href="#关于配置项" class="headerlink" title="关于配置项"></a>关于配置项</h2><ul>
 <li>首先我们来举个简单的例子，来解释有哪些可以算是配置项的（顺便灌输一下’项目管理’流程）。假设你是大厨，你要创造一个新菜式给你的客户吃，首先按照客户的需求，全素不要辣，根据这个需求首先你要计划用哪些材料，采用哪种方式烹饪，接着你开始拟制材料清单，制作步骤，采购材料回来后，你按照材料清单和步骤做好菜，端出去给客户。</li>
 <li>那这么一个过程里面，简单分了几个阶段：<ul>
 <li>需求获取和分析：经过跟客户沟通，知道客户要的是全素并且不辣，这个时候输出了需求分析说明</li>
@@ -340,9 +336,9 @@
 <li>结束：把成品确认OK了，把食物转交客户品尝</li>
 </ul>
 </li>
-<li><p>这里面，需求分析说明，方案设计说明，材料清单，材料，烹饪工具，烹饪地点，烹饪步骤说明，成品，都可以算是配置项。甚至还有做这个菜，你参考了哪些烹饪书，这个书也应该纳入配置项的范围<br>`</p>
+<li><p>这里面，需求分析说明，方案设计说明，材料清单，材料，烹饪工具，烹饪地点，烹饪步骤说明，成品，都可以算是配置项。甚至还有做这个菜，你参考了哪些烹饪书，这个书也应该纳入配置项的范围</p>
 </li>
-<li><p>最后我们来看一下’CMMI-DEV V1.3’中是如何划定配置项范围的，意思差不多就是<strong>整个产品开发过程所有相关的事物，都可以称之为配置项</strong>：</p>
+<li><p>接着我们来看一下’CMMI-DEV V1.3’中是如何划定配置项范围的，意思差不多就是<strong>整个产品开发过程所有相关的事物，都可以称之为配置项</strong>：</p>
 </li>
 </ul>
 <blockquote>
@@ -376,7 +372,7 @@
         <p><span>本文标题:</span><a href="/2016/11/06/2016/11/CM1/">如何用配置管理思想做文档管理（系列一：入门）</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">jungly</a></p>
         <p><span>发布时间:</span>2016-11-06, 19:03:52</p>
-        <p><span>最后更新:</span>2016-11-20, 01:08:12</p>
+        <p><span>最后更新:</span>2016-11-20, 01:13:17</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2016/11/06/2016/11/CM1/" title="如何用配置管理思想做文档管理（系列一：入门）">http://dusklife.com/2016/11/06/2016/11/CM1/</a>
             <span class="copy-path" data-clipboard-text="原文: http://dusklife.com/2016/11/06/2016/11/CM1/　　作者: jungly" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
