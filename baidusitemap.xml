@@ -5,7 +5,7 @@
     
   <url>
     <loc>http://dusklife.com/2016/11/06/2016/11/mywork_cm_introduce/</loc>
-    <lastmod>2017-01-05T14:25:21.295Z</lastmod>
+    <lastmod>2017-01-07T14:16:23.427Z</lastmod>
     <data>
         <display>
         <title>如何用配置管理思想做文档管理（系列一：入门）</title>
@@ -32,6 +32,30 @@
 
     
   <url>
+    <loc>http://dusklife.com/2016/11/22/2016/11/working_skill/</loc>
+    <lastmod>2017-01-07T14:16:23.395Z</lastmod>
+    <data>
+        <display>
+        <title>如果你是文职类/管理类岗位的，你可(bi)能(xu)具备以下技能</title>
+        <pubTime>2016-11-22T13:38:30.000Z</pubTime>
+        
+        <tag>技能</tag>
+         
+        <tag>自我增值</tag>
+         
+        <tag>自我要求</tag>
+         
+         
+           
+             
+              <breadCrumb title="Working" url="http://dusklife.com/categories/Working/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://dusklife.com/2017/01/05/2017/01/201612_mylife&music_share/</loc>
     <lastmod>2017-01-05T13:14:20.723Z</lastmod>
     <data>
@@ -41,11 +65,11 @@
         
         <tag>生活</tag>
          
-        <tag>整理</tag>
-         
         <tag>随笔</tag>
          
         <tag>总结</tag>
+         
+        <tag>整理</tag>
          
          
            
@@ -77,30 +101,6 @@
            
              
               <breadCrumb title="life" url="http://dusklife.com/categories/life/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://dusklife.com/2016/11/22/2016/11/working_skill/</loc>
-    <lastmod>2017-01-05T13:10:30.106Z</lastmod>
-    <data>
-        <display>
-        <title>如果你是文职类/管理类岗位的，你可(bi)能(xu)具备以下技能</title>
-        <pubTime>2016-11-22T13:38:30.000Z</pubTime>
-        
-        <tag>技能</tag>
-         
-        <tag>自我增值</tag>
-         
-        <tag>自我要求</tag>
-         
-         
-           
-             
-              <breadCrumb title="Working" url="http://dusklife.com/categories/Working/"/>
           
         </display>
     </data>

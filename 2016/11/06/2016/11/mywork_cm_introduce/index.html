@@ -19,13 +19,14 @@
 <meta property="og:url" content="http://dusklife.com/2016/11/06/2016/11/mywork_cm_introduce/index.html">
 <meta property="og:site_name" content="Jungly 博客">
 <meta property="og:description" content="简单理解配置管理">
-<meta property="og:image" content="http://dusk-life.b0.upaiyun.com/2016/CM1.jpg">
-<meta property="og:image" content="http://dusk-life.b0.upaiyun.com/2016/CM2.jpg">
-<meta property="og:updated_time" content="2017-01-05T14:25:21.295Z">
+<meta property="og:image" content="http://dusk-life.b0.upaiyun.com/2016/mywork_cm_introduce_1.jpg">
+<meta property="og:image" content="http://dusk-life.b0.upaiyun.com/2016/mywork_cm_introduce_2.jpg">
+<meta property="og:image" content="http://dusk-life.b0.upaiyun.com/2016/mywork_cm_introduce_3.jpg">
+<meta property="og:updated_time" content="2017-01-07T14:16:23.427Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="如何用配置管理思想做文档管理（系列一：入门）">
 <meta name="twitter:description" content="简单理解配置管理">
-<meta name="twitter:image" content="http://dusk-life.b0.upaiyun.com/2016/CM1.jpg">
+<meta name="twitter:image" content="http://dusk-life.b0.upaiyun.com/2016/mywork_cm_introduce_1.jpg">
 
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
@@ -283,11 +284,11 @@
           
         <a id="more"></a>
 <h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><ul>
-<li>现实环境：有关配置管理，大部分人听到这个词语都是一脸懵逼，完全无法理解这个职业是在做什么。也有人误解，会觉得配置管理无足轻重，而且很多公司对这一块的管理要求都不高</li>
+<li>现实环境：有关配置管理，大部分人听到这个词语都是一脸懵逼，完全无法理解这个职业是在做什么。也有人误解，会觉得配置管理无足轻重，而且很多公司对这一块的管理要求都不高。</li>
 <li>网络环境：<ul>
-<li>在亚马逊（平常喜欢在这里购书）搜索了一下关于配置管理的书，是寥寥无几。而自己看书有一点不好的就是，你得自己琢磨，对理解力要求比较高</li>
-<li>在网上搜索一下资料，很多都在讲述配置管理的一些基本概念，未入门的看得那是晦涩难懂</li>
-<li>在知乎、百度贴吧尝试搜索了一下关键字“配置管理”，活跃的话题很少</li>
+<li>在亚马逊（平常喜欢在这里购书）搜索了一下关于配置管理的书，是寥寥无几。而自己看书有一点不好的就是，你得自己琢磨，对理解力要求比较高。</li>
+<li>在网上搜索一下资料，很多都在讲述配置管理的一些基本概念，未入门的看得那是晦涩难懂。</li>
+<li>在知乎、百度贴吧尝试搜索了一下关键字“配置管理”，活跃的话题很少。</li>
 </ul>
 </li>
 <li>实际上配置管理并不是门槛那么高的职业，当你在对一系列文件进行管理的时候，其实已经在做配置管理,尽管并不全面。所以我希望通过这系列的文章，跟你简单地讲讲，配置管理是做什么的，可以怎么做</li>
@@ -295,30 +296,31 @@
 </ul>
 <h2 id="系列说明"><a href="#系列说明" class="headerlink" title="系列说明"></a>系列说明</h2><ul>
 <li>本系列会分为3大篇，3大篇对应的内容分别如下<ul>
-<li>1.如何简单地理解配置管理，配置管理有哪些基本概念</li>
-<li>2.基于CMMI讲述配置管理</li>
-<li>3.基于SVN搭建配置管理系统</li>
+<li>1.如何简单地理解配置管理，配置管理有哪些基本概念。</li>
+<li>2.基于CMMI讲述配置管理。</li>
+<li>3.基于SVN搭建配置管理系统。</li>
 </ul>
 </li>
 </ul>
-<h2 id="理论放在实际中–配置管理到底是什么鬼"><a href="#理论放在实际中–配置管理到底是什么鬼" class="headerlink" title="理论放在实际中–配置管理到底是什么鬼"></a>理论放在实际中–配置管理到底是什么鬼</h2><ul>
-<li>以管理你自己的电脑文件为例子，大部分人都有自己的管理目录，比方说我的C盘专门安装软件，D盘下一级目录分为01软件包、02音乐、03电影、04工作文件。然后你就会按照文件的类型把文件往里面存对不对。那么这个时候配置管理可以理解为，记录你的C盘装什么、D盘装什么、D盘下分了哪些目录，目录里面存放了哪些文件。</li>
-<li>那么哪些文件可以放在软件包，哪些可以放在音乐呢？我们按照文件一般形态去分，就是例如.rar和.exe是安装包，我要往01这个目录去存放的，.mp3是音乐文件，我要往02这个目录去存放的。到这个阶段其实已经有两份规章制度文件形成，第一是记录盘里的目录结构是怎么样的，第二个就是规定什么类型的文件应该放到哪个目录结构下。</li>
-<li>那么换个环境，你跟你的朋友一起共享这个目录，因为这个目录本身属于你个人，你不希望你的朋友去改动它，那这个时候就出现两种角色，你自己和你朋友，你的权限是可以对文档目录里面的内容进行读和写操作的，而你的朋友只能读，这个时候出现了第三份文件，记录有谁参与文档分享的这个事情里，每个人的权限是什么（这里的权限是具体到人的）。</li>
-<li>再放大一点，这个文档目录结构已经不是你自己的了，所以你没有绝对的权力去控制这个文档目录和里面的内容，参与到这个事情的人非常多，有各种各样的角色。这个时候需要有一份规章制度的文件，定义哪种角色应该赋予哪些权限，比方说爱看电影的，有权限给电影目录增删电影，但是没有权限访问软件包，不能修改音乐（这里的权限是具体到角色的）。</li>
-<li>然后你发现大家都在很随意修改里面的东西，你根本不知道以前有过什么文件，现在的文件是什么时候加进去的。所以你建立一个规定，每增加或删除一个文件都必须通过某个角色的审批，然后用某种工具记录起来。</li>
-<li>你作为一个管理员，你就需要随时监控文档目录的变化、不同的文件是否放在相应的目录下面，参与人的权限是否正常，修改文件有没有提交申请，申请有没有被通过，修改文件之后有没有用工具记录清楚。</li>
+<h2 id="理论放在实际中，配置管理到底是什么鬼"><a href="#理论放在实际中，配置管理到底是什么鬼" class="headerlink" title="理论放在实际中，配置管理到底是什么鬼"></a>理论放在实际中，配置管理到底是什么鬼</h2><ul>
+<li>以管理电脑文件为例子，假设C盘专门用于安装软件，D盘一级目录分为01软件包、02音乐、03电影、04工作文件。这个时候配置管理可以理解为，记录每个硬盘分别装了什么，D盘下分了哪些目录，目录里面存放了哪些文件。</li>
+<li>接下来要思考，哪些文件需要放在01，哪些需要放在02呢？按照文件一般形态分类，例如.rar和.exe是安装包，要往01这个目录去存放的，.mp3是音乐文件，要往02这个目录去存放的。到这个阶段其实有两份规章制度文件形成，第一是记录硬盘的目录结构是怎么样的，第二个就是规定什么类型的文件应该放到哪个目录结构下。</li>
+<li>换个环境，你跟你的朋友一起共享这个目录，因为这个目录本身属于你个人，你不希望你的朋友去改动它，这个时候出现了两种角色，你自己和你朋友，你的权限是可以对文档目录里面的内容进行读和写操作的，而你的朋友只能读，现阶段你需要有一份文件，记录有谁参与文档分享的这个事情里，每个人的权限是什么（这里的权限是具体到人的）。</li>
+<li>再放大一点，这个文档存放盘不是你的个人资产了，你没有绝对的权力去控制这个盘里面的结构和内容，参与到这个事情的人非常多，有各种各样的角色。这个时候需要有一份规章制度的文件，定义哪种角色应该赋予哪些权限，比方说爱看电影的，有权限给电影目录增删电影，但是没有权限访问软件包，不能修改音乐（这里的权限是具体到角色的）。</li>
+<li>接下来你发现大家都在很随意修改里面的东西，你根本不知道以前有过什么文件，现在的文件是什么时候加进去的。所以你建立一个规定，每增加或删除一个文件都必须通过某个角色的审批，同事要用某种工具记录起来。</li>
+<li>而作为一个管理员，就需要随时监控文档目录的变化、不同的文件是否放在相应的目录下面，参与人的权限是否正常，修改文件有没有提交申请，申请有没有被通过，修改文件之后有没有用工具记录清楚。</li>
 <li>以上的这些过程，其实就是属于配置管理。再详细的话，就需要往下看了。</li>
 </ul>
 <h2 id="关于配置管理"><a href="#关于配置管理" class="headerlink" title="关于配置管理"></a>关于配置管理</h2><blockquote>
-<p>首先还是先灌输一下配置管理的基本概念：<br>百度百科定义：<a href="http://baike.baidu.com/link?url=LiT1QsAwa3d929efYNCvB7a5-knpHls4HPcOrCz_e6b6g988EMvRgOWHPIRT4iQKaiDA8GFdZ0hfh5Ed_I_PWgcNrTw9cF7_Gc6c_286yRUUaU1BTctqG-mnPB6R668L" target="_blank" rel="external">配置管理</a>是通过技术或行政手段对软件产品及其开发过程和生命周期进行控制、规范的一系列措施。配置管理的目标是记录软件产品的演化过程，确保软件开发者在软件生命周期中各个阶段都能得到精确的产品配置。<br>维基百科定义：<a href="https://zh.wikipedia.org/wiki/%E7%B5%84%E6%85%8B%E7%AE%A1%E7%90%86" target="_blank" rel="external">配置管理</a>是一个创建系统工程的过程，用来创建与维持一个产品，让这个产品的性能、功能，以及它所要求的物理特性，在它的生命周期中，都能保持稳定与一致性。<br>IEEE610.12-90中定义：应用技术的和管理的指导和监督来：标识和用文档记录配置项的功能和物理特征、控制对这些特征的变更、记录和报告变更处理过程和实现状态、 验证与规定的需求的一致性。</p>
+<p>配置管理的基本概念：<br>百度百科定义：<a href="http://baike.baidu.com/link?url=LiT1QsAwa3d929efYNCvB7a5-knpHls4HPcOrCz_e6b6g988EMvRgOWHPIRT4iQKaiDA8GFdZ0hfh5Ed_I_PWgcNrTw9cF7_Gc6c_286yRUUaU1BTctqG-mnPB6R668L" target="_blank" rel="external">配置管理</a>是通过技术或行政手段对软件产品及其开发过程和生命周期进行控制、规范的一系列措施。配置管理的目标是记录软件产品的演化过程，确保软件开发者在软件生命周期中各个阶段都能得到精确的产品配置。<br>维基百科定义：<a href="https://zh.wikipedia.org/wiki/%E7%B5%84%E6%85%8B%E7%AE%A1%E7%90%86" target="_blank" rel="external">配置管理</a>是一个创建系统工程的过程，用来创建与维持一个产品，让这个产品的性能、功能，以及它所要求的物理特性，在它的生命周期中，都能保持稳定与一致性。<br>IEEE610.12-90中定义：应用技术的和管理的指导和监督来：标识和用文档记录配置项的功能和物理特征、控制对这些特征的变更、记录和报告变更处理过程和实现状态、 验证与规定的需求的一致性。</p>
 <ul>
 <li>从以上几条看来，其实可以抓到一个中心词，就是<strong>一致性</strong>，关于如何维护一致性后面我会详细的说，这里看看就行。</li>
 <li>然后知乎上有个回答是介绍配置管理的我觉得还不错，你可以点击去看：<a href="https://www.zhihu.com/question/20621014" target="_blank" rel="external">配置管理的起源、发展历程和主要作用是什么？</a></li>
 </ul>
 </blockquote>
 <h2 id="关于配置项"><a href="#关于配置项" class="headerlink" title="关于配置项"></a>关于配置项</h2><ul>
-<li>首先我们来举个简单的例子，来解释有哪些可以算是配置项的（顺便灌输一下’项目管理’流程）。假设你是大厨，你要创造一个新菜式给你的客户吃，首先按照客户的需求，全素不要辣，根据这个需求首先你要计划用哪些材料，采用哪种方式烹饪，接着你开始拟制材料清单，制作步骤，采购材料回来后，你按照材料清单和步骤做好菜，端出去给客户。</li>
+<li>举个简单的例子，来解释有哪些可以算是配置项的。</li>
+<li>假设你是大厨，你要创造一个新菜式给你的客户吃，首先按照客户的需求，全素不要辣，根据这个需求首先你要计划用哪些材料，采用哪种方式烹饪，接着你开始拟制材料清单，制作步骤，采购材料回来后，你按照材料清单和步骤做好菜，端出去给客户。</li>
 <li>在这个过程里面，简单分了几个阶段：<ul>
 <li>需求获取和分析：经过跟客户沟通，知道客户要的是全素并且不辣，这个时候输出了需求分析说明</li>
 <li>方案设计：计划用的材料和烹饪方式，这个时候有了方案设计说明</li>
@@ -327,17 +329,33 @@
 </ul>
 </li>
 <li>这里面，需求分析说明，方案设计说明，材料清单，材料，烹饪工具，烹饪地点，烹饪步骤说明，成品，都可以算是配置项。甚至还有做这个菜，你参考了哪些烹饪书，这个书也应该纳入配置项的范围</li>
-<li>接着我们来看一下CMMI-DEV V1.3中是如何划定配置项范围的，粗暴点理解就是<strong>整个产品开发过程所有相关的事物，都可以称之为配置项</strong>：<blockquote>
-<p><img src="http://dusk-life.b0.upaiyun.com/2016/CM1.jpg" alt="CMMI配置项1"><br><img src="http://dusk-life.b0.upaiyun.com/2016/CM2.jpg" alt="CMMI配置项2"></p>
+<li><code>CMMI-DEV V1.3</code>中是这样划定配置项范围的，粗暴点理解就是<strong>整个产品开发过程所有相关的事物，都可以称之为配置项</strong>：<blockquote>
+<p><img src="http://dusk-life.b0.upaiyun.com/2016/mywork_cm_introduce_1.jpg" alt="CMMI配置项1"><br><img src="http://dusk-life.b0.upaiyun.com/2016/mywork_cm_introduce_2.jpg" alt="CMMI配置项2"></p>
 </blockquote>
 </li>
-<li>由于CMMI-DEV由美国SEI发行后，经由台湾<strong>資訊工業策進會</strong>进行汉化，所以在部分词语上跟大陆的叫法不一样，<strong>建構管理</strong>指的其实就是配置管理，维基百科还叫<strong>組態管理</strong>。</li>
-<li>CMMI-DEV V1.3戳这里下载<a href="http://pan.baidu.com/s/1i5a4EpB" target="_blank" rel="external">o(￣▽￣)d</a></li>
+<li>由于<code>CMMI-DEV</code>由美国SEI发行后，经由台湾<strong>資訊工業策進會</strong>进行汉化，所以在部分词语上跟大陆的叫法不一样，<strong>建構管理</strong>指的其实就是配置管理，维基百科还叫<strong>組態管理</strong>。</li>
+<li><code>CMMI-DEV V1.3</code>戳这里下载<a href="http://pan.baidu.com/s/1i5a4EpB" target="_blank" rel="external">o(￣▽￣)d</a></li>
 </ul>
-<h2 id="关于基线（首先要了解项目管理流程，为了方便理解，以瀑布型模型来例子）"><a href="#关于基线（首先要了解项目管理流程，为了方便理解，以瀑布型模型来例子）" class="headerlink" title="关于基线（首先要了解项目管理流程，为了方便理解，以瀑布型模型来例子）"></a>关于基线（首先要了解项目管理流程，为了方便理解，以瀑布型模型来例子）</h2><h2 id="关于标识"><a href="#关于标识" class="headerlink" title="关于标识"></a>关于标识</h2><h3 id="什么是标识"><a href="#什么是标识" class="headerlink" title="什么是标识"></a>什么是标识</h3><h3 id="为什么要标识"><a href="#为什么要标识" class="headerlink" title="为什么要标识"></a>为什么要标识</h3><h2 id="关于版本控制"><a href="#关于版本控制" class="headerlink" title="关于版本控制"></a>关于版本控制</h2><h2 id="关于变更管理"><a href="#关于变更管理" class="headerlink" title="关于变更管理"></a>关于变更管理</h2><h3 id="为什么要管理变更"><a href="#为什么要管理变更" class="headerlink" title="为什么要管理变更"></a>为什么要管理变更</h3><ul>
-<li>（其中配置管理的定义和目的提到的一点就是保持产品的一致性，假设） <h3 id="如何管理变更"><a href="#如何管理变更" class="headerlink" title="如何管理变更"></a>如何管理变更</h3></li>
+<h2 id="关于基线"><a href="#关于基线" class="headerlink" title="关于基线"></a>关于基线</h2><blockquote>
+<p>在CMMI 的定义中，基线是指经正式审查及同意的一组规格或工作产品，据以用作未来发展的基础，而且仅能由变更管制程序变更。</p>
+<ul>
+<li>以瀑布型开发模型来讲，一个项目的开发会分为项目立项、需求分析、设计、编码、测试、结项。在这六大阶段，其实可以建立五个基线，分别为：计划基线、需求基线、设计基线、测试基线和发布基线。而且基线一旦建立，不可随意变更。</li>
+<li><strong>计划基线</strong>：在项目进行计划时建立，此时项目的计划应该是全面、清晰、准确并且文档化的。必要的文档包括<code>《项目总体计划》</code>、<code>《WBS计划》</code>。</li>
+<li><strong>需求基线</strong>： 在需求分析规格说明书通过评审后建立，此时客户需求和产品需求应该是全面、清晰、准确并且文档化的。必要的文档包括<code>《需求分析规格.doc》</code>和<code>《功能清单.xls》</code></li>
+<li><strong>设计基线</strong>：在详细设计完成并通过同行评审后建立。此时产品需求的实现方式应该是全面、清晰、准确和文档化的。必要的文档包括<code>《总体设计规格.doc》</code>、<code>《详细设计规格.doc》</code>、<code>《数据库设计.pdm》</code>。通常这些文档由设计人员提供。设计基线建立后，开发人员可以根据设计基线确定的成果进行代码开发。</li>
+<li><strong>测试基线</strong>：在开发人员完成开发后，将软件系统交给测试人员测试时建立。测试基线是提供测试过程需要输入的文档或者环境，如《测试用例》。</li>
+<li><strong>发布基线</strong>：是在测试阶段完成后建立。建立测试基线时，测试中发现的所有bug应该已经fixed或者未fixed但不影响系统使用。未fixed的bug作为遗留问题被记录下来。软件发布时，测试人员应该提供的文档包括<code>《readme.txt》</code>（描述软件产品信息）、<code>《用户手册.doc》</code>、<code>《安装配置手册.doc》</code>、<code>《软件产品质量报告.doc》</code>和产品安装包。</li>
 </ul>
-<h2 id="关于配置审计"><a href="#关于配置审计" class="headerlink" title="关于配置审计"></a>关于配置审计</h2><h2 id="关于配置状态报告"><a href="#关于配置状态报告" class="headerlink" title="关于配置状态报告"></a>关于配置状态报告</h2><h2 id="结束语"><a href="#结束语" class="headerlink" title="结束语"></a>结束语</h2><ul>
+</blockquote>
+<h2 id="关于标识"><a href="#关于标识" class="headerlink" title="关于标识"></a>关于标识</h2><ul>
+<li>标识有点等同于身份证号码，它是唯一的不应变更的。在有硬件的产品里，一般会以产品型号作为唯一的标识。-而特性就是这一个配置项具备的一些特征。</li>
+<li>举个例子：<blockquote>
+<p><img src="http://dusk-life.b0.upaiyun.com/2016/mywork_cm_introduce_3.jpg" alt="CM_标识举例"></p>
+</blockquote>
+</li>
+<li>在这个例子里面，ABC-EFG就是产品的唯一标识，这份文件是测试规范还是原理图，版本是V1.00还是V1.01，文档的作者是谁，输出的日期是什么时候，文件的格式是什么，这些就是就是配置项的特性。</li>
+</ul>
+<h2 id="关于版本控制"><a href="#关于版本控制" class="headerlink" title="关于版本控制"></a>关于版本控制</h2><h2 id="关于变更管理"><a href="#关于变更管理" class="headerlink" title="关于变更管理"></a>关于变更管理</h2><h3 id="为什么要管理变更"><a href="#为什么要管理变更" class="headerlink" title="为什么要管理变更"></a>为什么要管理变更</h3><h3 id="如何管理变更"><a href="#如何管理变更" class="headerlink" title="如何管理变更"></a>如何管理变更</h3><h2 id="关于配置审计"><a href="#关于配置审计" class="headerlink" title="关于配置审计"></a>关于配置审计</h2><h2 id="关于配置状态报告"><a href="#关于配置状态报告" class="headerlink" title="关于配置状态报告"></a>关于配置状态报告</h2><h2 id="结束语"><a href="#结束语" class="headerlink" title="结束语"></a>结束语</h2><ul>
 <li>如果你有计划在项目管理这块长久发展或者死磕到底的，我建议还是软考或者PMP报个名，有预算的你再报个班，逼自己听听课，这些证书不会对你薪酬福利有多大帮助，但是你可以通过这个机会系统地学习这门学科，这样在处理事情的时候你能够不断地去联想你现在在做的，是理论知识里面的哪部分，那么然后接下来会出现哪类型的状况或者下一个阶段是什么。</li>
 </ul>
 <h2 id="下期预告"><a href="#下期预告" class="headerlink" title="下期预告"></a>下期预告</h2><ul>
@@ -352,7 +370,7 @@
         <p><span>本文标题:</span><a href="/2016/11/06/2016/11/mywork_cm_introduce/">如何用配置管理思想做文档管理（系列一：入门）</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">jungly</a></p>
         <p><span>发布时间:</span>2016-11-06, 19:03:52</p>
-        <p><span>最后更新:</span>2017-01-05, 22:25:21</p>
+        <p><span>最后更新:</span>2017-01-07, 22:16:23</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2016/11/06/2016/11/mywork_cm_introduce/" title="如何用配置管理思想做文档管理（系列一：入门）">http://dusklife.com/2016/11/06/2016/11/mywork_cm_introduce/</a>
             <span class="copy-path" data-clipboard-text="原文: http://dusklife.com/2016/11/06/2016/11/mywork_cm_introduce/　　作者: jungly" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
@@ -380,7 +398,7 @@
 <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#写在前面"><span class="toc-number">1.</span> <span class="toc-text">写在前面</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#系列说明"><span class="toc-number">2.</span> <span class="toc-text">系列说明</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#理论放在实际中–配置管理到底是什么鬼"><span class="toc-number">3.</span> <span class="toc-text">理论放在实际中–配置管理到底是什么鬼</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#关于配置管理"><span class="toc-number">4.</span> <span class="toc-text">关于配置管理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#关于配置项"><span class="toc-number">5.</span> <span class="toc-text">关于配置项</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#关于基线（首先要了解项目管理流程，为了方便理解，以瀑布型模型来例子）"><span class="toc-number">6.</span> <span class="toc-text">关于基线（首先要了解项目管理流程，为了方便理解，以瀑布型模型来例子）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#关于标识"><span class="toc-number">7.</span> <span class="toc-text">关于标识</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#什么是标识"><span class="toc-number">7.1.</span> <span class="toc-text">什么是标识</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#为什么要标识"><span class="toc-number">7.2.</span> <span class="toc-text">为什么要标识</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#关于版本控制"><span class="toc-number">8.</span> <span class="toc-text">关于版本控制</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#关于变更管理"><span class="toc-number">9.</span> <span class="toc-text">关于变更管理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#为什么要管理变更"><span class="toc-number">9.1.</span> <span class="toc-text">为什么要管理变更</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#如何管理变更"><span class="toc-number">9.2.</span> <span class="toc-text">如何管理变更</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#关于配置审计"><span class="toc-number">10.</span> <span class="toc-text">关于配置审计</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#关于配置状态报告"><span class="toc-number">11.</span> <span class="toc-text">关于配置状态报告</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#结束语"><span class="toc-number">12.</span> <span class="toc-text">结束语</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#下期预告"><span class="toc-number">13.</span> <span class="toc-text">下期预告</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#写在前面"><span class="toc-number">1.</span> <span class="toc-text">写在前面</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#系列说明"><span class="toc-number">2.</span> <span class="toc-text">系列说明</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#理论放在实际中，配置管理到底是什么鬼"><span class="toc-number">3.</span> <span class="toc-text">理论放在实际中，配置管理到底是什么鬼</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#关于配置管理"><span class="toc-number">4.</span> <span class="toc-text">关于配置管理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#关于配置项"><span class="toc-number">5.</span> <span class="toc-text">关于配置项</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#关于基线"><span class="toc-number">6.</span> <span class="toc-text">关于基线</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#关于标识"><span class="toc-number">7.</span> <span class="toc-text">关于标识</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#关于版本控制"><span class="toc-number">8.</span> <span class="toc-text">关于版本控制</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#关于变更管理"><span class="toc-number">9.</span> <span class="toc-text">关于变更管理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#为什么要管理变更"><span class="toc-number">9.1.</span> <span class="toc-text">为什么要管理变更</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#如何管理变更"><span class="toc-number">9.2.</span> <span class="toc-text">如何管理变更</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#关于配置审计"><span class="toc-number">10.</span> <span class="toc-text">关于配置审计</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#关于配置状态报告"><span class="toc-number">11.</span> <span class="toc-text">关于配置状态报告</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#结束语"><span class="toc-number">12.</span> <span class="toc-text">结束语</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#下期预告"><span class="toc-number">13.</span> <span class="toc-text">下期预告</span></a></li></ol>
         
     </div>
     <style>
