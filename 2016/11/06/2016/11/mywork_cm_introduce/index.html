@@ -22,7 +22,7 @@
 <meta property="og:image" content="http://dusk-life.b0.upaiyun.com/2016/mywork_cm_introduce_1.jpg">
 <meta property="og:image" content="http://dusk-life.b0.upaiyun.com/2016/mywork_cm_introduce_2.jpg">
 <meta property="og:image" content="http://dusk-life.b0.upaiyun.com/2016/mywork_cm_introduce_3.jpg">
-<meta property="og:updated_time" content="2017-01-07T14:16:23.427Z">
+<meta property="og:updated_time" content="2017-01-07T14:21:50.365Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="如何用配置管理思想做文档管理（系列一：入门）">
 <meta name="twitter:description" content="简单理解配置管理">
@@ -313,11 +313,11 @@
 </ul>
 <h2 id="关于配置管理"><a href="#关于配置管理" class="headerlink" title="关于配置管理"></a>关于配置管理</h2><blockquote>
 <p>配置管理的基本概念：<br>百度百科定义：<a href="http://baike.baidu.com/link?url=LiT1QsAwa3d929efYNCvB7a5-knpHls4HPcOrCz_e6b6g988EMvRgOWHPIRT4iQKaiDA8GFdZ0hfh5Ed_I_PWgcNrTw9cF7_Gc6c_286yRUUaU1BTctqG-mnPB6R668L" target="_blank" rel="external">配置管理</a>是通过技术或行政手段对软件产品及其开发过程和生命周期进行控制、规范的一系列措施。配置管理的目标是记录软件产品的演化过程，确保软件开发者在软件生命周期中各个阶段都能得到精确的产品配置。<br>维基百科定义：<a href="https://zh.wikipedia.org/wiki/%E7%B5%84%E6%85%8B%E7%AE%A1%E7%90%86" target="_blank" rel="external">配置管理</a>是一个创建系统工程的过程，用来创建与维持一个产品，让这个产品的性能、功能，以及它所要求的物理特性，在它的生命周期中，都能保持稳定与一致性。<br>IEEE610.12-90中定义：应用技术的和管理的指导和监督来：标识和用文档记录配置项的功能和物理特征、控制对这些特征的变更、记录和报告变更处理过程和实现状态、 验证与规定的需求的一致性。</p>
+</blockquote>
 <ul>
 <li>从以上几条看来，其实可以抓到一个中心词，就是<strong>一致性</strong>，关于如何维护一致性后面我会详细的说，这里看看就行。</li>
 <li>然后知乎上有个回答是介绍配置管理的我觉得还不错，你可以点击去看：<a href="https://www.zhihu.com/question/20621014" target="_blank" rel="external">配置管理的起源、发展历程和主要作用是什么？</a></li>
 </ul>
-</blockquote>
 <h2 id="关于配置项"><a href="#关于配置项" class="headerlink" title="关于配置项"></a>关于配置项</h2><ul>
 <li>举个简单的例子，来解释有哪些可以算是配置项的。</li>
 <li>假设你是大厨，你要创造一个新菜式给你的客户吃，首先按照客户的需求，全素不要辣，根据这个需求首先你要计划用哪些材料，采用哪种方式烹饪，接着你开始拟制材料清单，制作步骤，采购材料回来后，你按照材料清单和步骤做好菜，端出去给客户。</li>
@@ -329,15 +329,18 @@
 </ul>
 </li>
 <li>这里面，需求分析说明，方案设计说明，材料清单，材料，烹饪工具，烹饪地点，烹饪步骤说明，成品，都可以算是配置项。甚至还有做这个菜，你参考了哪些烹饪书，这个书也应该纳入配置项的范围</li>
-<li><code>CMMI-DEV V1.3</code>中是这样划定配置项范围的，粗暴点理解就是<strong>整个产品开发过程所有相关的事物，都可以称之为配置项</strong>：<blockquote>
+<li><code>CMMI-DEV V1.3</code>中是这样划定配置项范围的，粗暴点理解就是<strong>整个产品开发过程所有相关的事物，都可以称之为配置项</strong>：</li>
+</ul>
+<blockquote>
 <p><img src="http://dusk-life.b0.upaiyun.com/2016/mywork_cm_introduce_1.jpg" alt="CMMI配置项1"><br><img src="http://dusk-life.b0.upaiyun.com/2016/mywork_cm_introduce_2.jpg" alt="CMMI配置项2"></p>
 </blockquote>
-</li>
+<ul>
 <li>由于<code>CMMI-DEV</code>由美国SEI发行后，经由台湾<strong>資訊工業策進會</strong>进行汉化，所以在部分词语上跟大陆的叫法不一样，<strong>建構管理</strong>指的其实就是配置管理，维基百科还叫<strong>組態管理</strong>。</li>
 <li><code>CMMI-DEV V1.3</code>戳这里下载<a href="http://pan.baidu.com/s/1i5a4EpB" target="_blank" rel="external">o(￣▽￣)d</a></li>
 </ul>
 <h2 id="关于基线"><a href="#关于基线" class="headerlink" title="关于基线"></a>关于基线</h2><blockquote>
 <p>在CMMI 的定义中，基线是指经正式审查及同意的一组规格或工作产品，据以用作未来发展的基础，而且仅能由变更管制程序变更。</p>
+</blockquote>
 <ul>
 <li>以瀑布型开发模型来讲，一个项目的开发会分为项目立项、需求分析、设计、编码、测试、结项。在这六大阶段，其实可以建立五个基线，分别为：计划基线、需求基线、设计基线、测试基线和发布基线。而且基线一旦建立，不可随意变更。</li>
 <li><strong>计划基线</strong>：在项目进行计划时建立，此时项目的计划应该是全面、清晰、准确并且文档化的。必要的文档包括<code>《项目总体计划》</code>、<code>《WBS计划》</code>。</li>
@@ -346,13 +349,14 @@
 <li><strong>测试基线</strong>：在开发人员完成开发后，将软件系统交给测试人员测试时建立。测试基线是提供测试过程需要输入的文档或者环境，如《测试用例》。</li>
 <li><strong>发布基线</strong>：是在测试阶段完成后建立。建立测试基线时，测试中发现的所有bug应该已经fixed或者未fixed但不影响系统使用。未fixed的bug作为遗留问题被记录下来。软件发布时，测试人员应该提供的文档包括<code>《readme.txt》</code>（描述软件产品信息）、<code>《用户手册.doc》</code>、<code>《安装配置手册.doc》</code>、<code>《软件产品质量报告.doc》</code>和产品安装包。</li>
 </ul>
-</blockquote>
 <h2 id="关于标识"><a href="#关于标识" class="headerlink" title="关于标识"></a>关于标识</h2><ul>
 <li>标识有点等同于身份证号码，它是唯一的不应变更的。在有硬件的产品里，一般会以产品型号作为唯一的标识。-而特性就是这一个配置项具备的一些特征。</li>
-<li>举个例子：<blockquote>
+<li>举个例子：</li>
+</ul>
+<blockquote>
 <p><img src="http://dusk-life.b0.upaiyun.com/2016/mywork_cm_introduce_3.jpg" alt="CM_标识举例"></p>
 </blockquote>
-</li>
+<ul>
 <li>在这个例子里面，ABC-EFG就是产品的唯一标识，这份文件是测试规范还是原理图，版本是V1.00还是V1.01，文档的作者是谁，输出的日期是什么时候，文件的格式是什么，这些就是就是配置项的特性。</li>
 </ul>
 <h2 id="关于版本控制"><a href="#关于版本控制" class="headerlink" title="关于版本控制"></a>关于版本控制</h2><h2 id="关于变更管理"><a href="#关于变更管理" class="headerlink" title="关于变更管理"></a>关于变更管理</h2><h3 id="为什么要管理变更"><a href="#为什么要管理变更" class="headerlink" title="为什么要管理变更"></a>为什么要管理变更</h3><h3 id="如何管理变更"><a href="#如何管理变更" class="headerlink" title="如何管理变更"></a>如何管理变更</h3><h2 id="关于配置审计"><a href="#关于配置审计" class="headerlink" title="关于配置审计"></a>关于配置审计</h2><h2 id="关于配置状态报告"><a href="#关于配置状态报告" class="headerlink" title="关于配置状态报告"></a>关于配置状态报告</h2><h2 id="结束语"><a href="#结束语" class="headerlink" title="结束语"></a>结束语</h2><ul>
@@ -370,7 +374,7 @@
         <p><span>本文标题:</span><a href="/2016/11/06/2016/11/mywork_cm_introduce/">如何用配置管理思想做文档管理（系列一：入门）</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">jungly</a></p>
         <p><span>发布时间:</span>2016-11-06, 19:03:52</p>
-        <p><span>最后更新:</span>2017-01-07, 22:16:23</p>
+        <p><span>最后更新:</span>2017-01-07, 22:21:50</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2016/11/06/2016/11/mywork_cm_introduce/" title="如何用配置管理思想做文档管理（系列一：入门）">http://dusklife.com/2016/11/06/2016/11/mywork_cm_introduce/</a>
             <span class="copy-path" data-clipboard-text="原文: http://dusklife.com/2016/11/06/2016/11/mywork_cm_introduce/　　作者: jungly" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
