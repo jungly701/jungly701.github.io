@@ -65,11 +65,11 @@
     
       <category term="生活" scheme="http://dusklife.com/tags/%E7%94%9F%E6%B4%BB/"/>
     
+      <category term="整理" scheme="http://dusklife.com/tags/%E6%95%B4%E7%90%86/"/>
+    
       <category term="随笔" scheme="http://dusklife.com/tags/%E9%9A%8F%E7%AC%94/"/>
     
       <category term="总结" scheme="http://dusklife.com/tags/%E6%80%BB%E7%BB%93/"/>
-    
-      <category term="整理" scheme="http://dusklife.com/tags/%E6%95%B4%E7%90%86/"/>
     
   </entry>
   
@@ -146,7 +146,7 @@
     <link href="http://dusklife.com/2016/11/22/2016/11/working_skill/"/>
     <id>http://dusklife.com/2016/11/22/2016/11/working_skill/</id>
     <published>2016-11-22T13:38:30.000Z</published>
-    <updated>2017-01-09T12:35:38.875Z</updated>
+    <updated>2017-01-09T12:41:23.757Z</updated>
     
     <content type="html"><![CDATA[<a id="more"></a>
 <h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><ul>
@@ -198,8 +198,7 @@
 <p>一开始接触CMMI的时候，我去问公司里面一个有CMMI评级经验的前辈，我问她我们公司软硬结合的项目和纯软的项目在QA管理上有什么特别不一样的地方吗？有哪些工作是QA的职责范围内的？这两个问题属于比较大的问题，我并没有得到答案。现在看来，这两个问题我估计没有一两节培训课讲不清楚。其实就是因为我问的方式不好，才导致我得不到我想要的信息，在这个过程中我自己是偷懒了，没有认真地了解过，直接把问题丢给别人，得不到答案也是理所当然的。</p>
 </blockquote>
 </li>
-<li><p><strong>保留证据</strong>：这个不用我多说了，特别是有一些容易出现争议的情况，最好是以书面或者企业内部沟通工具进行沟通。</p>
-</li>
+<li><strong>保留证据</strong>：这个不用我多说了，特别是有一些容易出现争议的情况，最好是以书面或者企业内部沟通工具进行沟通。</li>
 <li><strong>谨慎发言</strong>：出现问题了先查前因后果，细枝末节再发言，比你一无所知就发言，要来得好。但是这个有点不好的就是，回应事件的速度就会比较慢。</li>
 <li><strong>顺序沟通</strong>：按照“执行者-执行者”、“执行者-对方领导”、“执行者-己方领导”、“己方领导-对方领导”的顺序进行沟通。就是你和协助部门的执行人员沟通无果后在找对方领导，对方领导沟通无果了找自己领导汇报情况，由自己领导跟对方领导直接沟通。但是前面两个，在不能确认对方执行者是谁的时候，可以先找领导确认情况，询问该事项可以找谁协助。</li>
 </ul>
@@ -248,7 +247,7 @@
     <link href="http://dusklife.com/2016/11/06/2016/11/mywork_cm_introduce/"/>
     <id>http://dusklife.com/2016/11/06/2016/11/mywork_cm_introduce/</id>
     <published>2016-11-06T11:03:52.000Z</published>
-    <updated>2017-01-09T12:35:38.948Z</updated>
+    <updated>2017-01-09T12:41:50.215Z</updated>
     
     <content type="html"><![CDATA[<a id="more"></a>
 <h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><ul>
@@ -334,8 +333,7 @@
 <p>XX项目设计稿.PSD<br>XX项目设计稿修改版.PSD<br>XX项目设计稿最终版.PSD<br>XX项目设计稿最终版的修改版.PSD<br>XX项目设计稿最终版的最终版.PSD<br>XX项目设计稿最终版的最终版的修改版.PSD<br>XX项目设计稿最终版的最终版的最终版.PSD</p>
 </blockquote>
 </li>
-<li><p>假设到最后，客户觉得后面的这些版本都不行，要恢复到之前的某一个版本，那这个时候是不是会傻眼了，之前的哪个版本呀？这改动了那么多次，到底改了些啥呀？</p>
-</li>
+<li>假设到最后，客户觉得后面的这些版本都不行，要恢复到之前的某一个版本，那这个时候是不是会傻眼了，之前的哪个版本呀？这改动了那么多次，到底改了些啥呀？</li>
 <li>在百度百科的解释中，版本控制是透过文档控制记录程序各个模组的改动，并为每次改动编上序号。版本控制它所管理的，除了要给每一次的输出做编号之外，还需要记录每一次的变动，当出现问题的时候，我们可以快速地追踪到版本之间的差异，并且能回滚到前面的状态。<br>版本控制的工具/方式有很多，<code>SVN</code>、<code>git</code>这些属于比较通用的。这类工具，他们是自动对变量进行记录的。</li>
 </ul>
 <h2 id="关于变更管理"><a href="#关于变更管理" class="headerlink" title="关于变更管理"></a>关于变更管理</h2><ul>
