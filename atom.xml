@@ -191,7 +191,7 @@
     <link href="http://dusklife.com/2016/11/20/2016/11/mywork_cm_introduce_2/"/>
     <id>http://dusklife.com/2016/11/20/2016/11/mywork_cm_introduce_2/</id>
     <published>2016-11-20T11:03:52.000Z</published>
-    <updated>2017-03-18T16:48:10.045Z</updated>
+    <updated>2017-03-18T17:03:20.756Z</updated>
     
     <content type="html"><![CDATA[<a id="more"></a>
 <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><ul>
@@ -203,7 +203,7 @@
 <li>配置状态记录：记录配置项的状态，配置项的变化，配置项的差异</li>
 <li>配置审计：确认实际的管理状态是否达到预期的手段</li>
 <li>详细可见下图</li>
-<li><img src="http://dusk-life.b0.upaiyun.com/2016/mywork_cm_introduce_1.jpg" alt="CMMI配置管理解读"></li>
+<li><img src="http://dusk-life.b0.upaiyun.com/2016/mywork_cm_exposition_1.jpg" alt="CMMI配置管理解读"></li>
 </ul>
 </li>
 </ul>
